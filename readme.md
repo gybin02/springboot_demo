@@ -1,4 +1,7 @@
 ### SpringBoot Demo测试
+参考Url：
+https://www.cnblogs.com/xuwujing/p/8260935.html
+
 ### 功能
 1.  查找全部
 
@@ -8,12 +11,9 @@ http://localhost:8080/api/user/findAll
 
 http://localhost:8080/api/user/addUse
 ```
-Content-Type= application/x-www-form-urlencoded
-
+application/json
 body: 
-id:23
-name:sdfsdf
-age:23423
+{"id":213,"name":"你好","age":234}
 ```
 
 ### 文档

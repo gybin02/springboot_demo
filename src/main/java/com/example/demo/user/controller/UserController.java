@@ -3,10 +3,7 @@ package com.example.demo.user.controller;
 import com.example.demo.user.bean.User;
 import com.example.demo.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import sun.plugin2.message.GetAppletMessage;
 
 import java.util.List;
@@ -19,7 +16,7 @@ public class UserController {
     UserService userService;
 
     @RequestMapping(value = "/addUser",method = RequestMethod.POST)
-    public boolean addUser(User user){
+    public boolean addUser(@RequestBody User user){
         return userService.addUser(user);
     }
 
