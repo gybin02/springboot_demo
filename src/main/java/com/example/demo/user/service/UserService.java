@@ -2,6 +2,8 @@ package com.example.demo.user.service;
 
 import com.example.demo.user.bean.User;
 
+import java.util.List;
+
 public interface UserService {
     
     /**
@@ -37,7 +39,9 @@ public interface UserService {
      * @param userId
      */
     User findUserById(int userId);
-    
+
+    List<User> findAll();
+
 //     /**
 //     * 根据用户ID查询用户信息
 //     * @param userAge

@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import sun.plugin2.message.GetAppletMessage;
+
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/api/user")
@@ -36,6 +39,12 @@ public class UserController {
     public User findByUserId(@RequestParam(value = "userId", required = true) int userId) {
         System.out.println("开始查询...");
         return userService.findUserById(userId);
+    }
+
+
+    @RequestMapping(value = "/findAll",method = RequestMethod.GET)
+    public List<User> findAllUser(){
+        return userService.findAll();
     }
 
 //    @RequestMapping(value = "/userAge", method = RequestMethod.GET)

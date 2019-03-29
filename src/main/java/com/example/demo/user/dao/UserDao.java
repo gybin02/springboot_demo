@@ -21,7 +21,7 @@ public interface UserDao {
     @Select("SELECT id,name,age FROM t_user where id = #{id}")
     User findUser(int id);
 
-    @Select("select * from t_user")
+    @Select("select * from t_user limit 10")
     List<User> findAll();
 
 }
